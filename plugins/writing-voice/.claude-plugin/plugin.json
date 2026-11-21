@@ -1,0 +1,11 @@
+{
+  "name": "writing-voice",
+  "displayName": "Writing voice",
+  "version": "0.1.0",
+  "description": "Keeps markdown in my own writing voice, and only in the repos that ask for it.",
+  "author": {
+    "name": "Anders Henriksen"
+  },
+  "license": "MIT",
+  "keywords": ["writing", "markdown", "style", "voice"]
+}

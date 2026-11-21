@@ -1,0 +1,16 @@
+{
+  "name": "anders-plugins",
+  "description": "My own Claude Code plugins.",
+  "owner": {
+    "name": "Anders Henriksen"
+  },
+  "plugins": [
+    {
+      "name": "writing-voice",
+      "source": "./plugins/writing-voice",
+      "description": "Checks and measures markdown against my own writing voice, in the repos that ask for it.",
+      "category": "writing",
+      "tags": ["writing", "markdown", "style"]
+    }
+  ]
+}

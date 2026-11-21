@@ -1,0 +1,7 @@
+# My own sample answers, if I ever keep a copy next to the plugin.
+writing-samples.md
+
+# Tool caches.
+.mypy_cache/
+.ruff_cache/
+__pycache__/

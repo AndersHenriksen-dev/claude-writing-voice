@@ -1,0 +1,30 @@
+# Config for the plugin's two scripts. The values are the ones in my python-style guide, and ruff and mypy both
+# read this file, so the checks need no virtual environment.
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+# E/F/I/W pyflakes and pycodestyle, ANN annotations, D Google docstrings, B/SIM/C4/UP bugbear through
+# pyupgrade, COM812 trailing commas, RUF ruff's own checks.
+select = ["E", "F", "I", "W", "ANN", "D", "B", "SIM", "C4", "UP", "COM812", "RUF"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# The hook has to spell out an em dash and a curly apostrophe to find them, so RUF001 fires on the two regexes
+# that are the point of the file.
+"plugins/*/scripts/*.py" = ["RUF001"]
+
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+strict_equality = true
