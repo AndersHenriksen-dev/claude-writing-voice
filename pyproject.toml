@@ -7,8 +7,11 @@ line-length = 120
 
 [tool.ruff.lint]
 # E/F/I/W pyflakes and pycodestyle, ANN annotations, D Google docstrings, B/SIM/C4/UP bugbear through
-# pyupgrade, COM812 trailing commas, RUF ruff's own checks.
-select = ["E", "F", "I", "W", "ANN", "D", "B", "SIM", "C4", "UP", "COM812", "RUF"]
+# pyupgrade, RUF ruff's own checks.
+# COM812 (trailing commas) is deliberately absent: `ruff format` already adds the comma when it
+# explodes a call, so selecting the rule adds nothing and makes every format run print a conflict
+# warning.
+select = ["E", "F", "I", "W", "ANN", "D", "B", "SIM", "C4", "UP", "RUF"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
